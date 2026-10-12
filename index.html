@@ -57,70 +57,93 @@
     <!-- JavaScript Logic -->
     <script>
         let currentView = 'Home';
-
-        const pieces = [ 
-  {
-        title: "The Student Who Taught Me True Growth",
-        titleHindi: "वो छात्र जिसने मुझे सिखाया कि तरक्की हमेशा अच्छे नंबरों से नहीं दिखती",
-        type: "Reflection",
-        language: "Hindi",
-        date: "Reflection · 5 min",
-        excerpt: "वो तीसरी बेंच पर बैठता था, अक्सर छत को घूरते हुए। उसके टेस्ट पेपर लाल स्याही से भरे रहते थे...",
-        translation: "He used to sit on the third bench, often staring at the ceiling. His test papers were filled with red ink...",
-        read: "वो तीसरी बेंच पर बैठता था, अक्सर छत को घूरते हुए।<br>उसके टेस्ट पेपर लाल स्याही (red ink) से भरे रहते थे।<br><br>एक टीचर के तौर पर, मेरा फर्ज बनता था इसे 'ठीक' करना।<br>मैंने उसे एक्स्ट्रा वर्कशीट्स दीं, स्कूल के बाद रोका, उसके डेटा को ट्रैक किया, उसकी नाकामयाबियों का चार्ट बनाया।<br><br>मैं उसे अपनी उम्मीदों के मुताबिक ऊपर खींचने में इतना मगन था कि मैं यह देखना ही भूल गया कि वो असल में कहाँ खड़ा है।<br><br>फिर एक आम सा मंगलवार आया।<br><br>मैं क्लास में घूम रहा था कि मेरी नज़र उस पर पड़ी।<br>आम तौर पर, जब उसे कोई सवाल नहीं आता था, तो वो पेंसिल रख देता, हाथ बांध लेता और मन ही मन हार मान लेता। ये उसका बचाव तंत्र था— 'अगर मैं कोशिश ही नहीं करूँगा, तो फेल भी नहीं होऊँगा।'<br><br>लेकिन इस बार… उसने पेंसिल नहीं रखी।<br>वो पेपर को देखता रहा। उसने माथा चढ़ाया। एक गलत जवाब मिटाया।<br><br>और फिर, उसने कुछ ऐसा किया जिसने मेरे कदम रोक दिए।<br><br>उसने हाथ उठाया।<br><br>\"Ma'am / Sir, मैं चौथे सवाल में अटक गया हूँ,\" उसने धीमी, कांपती आवाज़ में कहा। \"क्या आप मुझे कोई संकेत (hint) दे सकते हैं?\"<br><br>मेरा गला भर आया।<br>उसे तुरंत सही जवाब नहीं मिला। असल में, वो पूरे test में संघर्ष करता रहा। जब result आया, तो उसे 52% marks मिले।<br><br>स्कूल के मापदंडों के हिसाब से, वो अभी भी फेल था।<br>लेकिन उस पल में, उसने एक बहुत बड़ी जीत हासिल कर ली थी।<br><br>उसकी तरक्की 40 से 80 तक का सफर नहीं थी।<br>उसकी तरक्की थी— \"मैं नहीं कर सकता\" से बदलकर \"मैं अटक गया हूँ, कृपया मेरी मदद करो\" तक पहुँचना।<br><br>ये था उसका हौसला।<br>ये थी खुद के लिए आवाज़ उठाने की हिम्मत।<br>ये थी खुद पर भरोसा रखने की खूबसूरत शुरुआत।<br><br>उस दिन, उसने मुझे एक ऐसा सबक सिखाया जो मैं कभी नहीं भूलूँगा/भूलूँगी:<br><br>हम Data, benchmarks और grades में इतने खो जाते हैं कि हम असली इंसानी विकास (human growth) को देखना भूल जाते हैं।<br><br>तरक्की हमेशा रिपोर्ट कार्ड पर 'A' ग्रेड की तरह नहीं दिखती।<br>कभी-कभी तरक्की ये होती है कि जो बच्चा किताब देखकर रोने लगता था, अब बिना छोड़े एक पेज पढ़ लेता है।<br>कभी-कभी ये होती है कि जो बच्चा लड़ता था, अब कुर्सी पटकने के बजाय 5 मिनट का break माँग लेता है।<br>कभी-कभी तरक्की सिर्फ क्लास में आना होता है, उस दिन जब वो घर पर रहना चाहता था।<br><br>वो उस test में फिर भी पास नहीं हुआ। लेकिन वो एक बहुत बड़ी चीज़ में पास हो गया।<br><br>उसने मुझे सिखाया कि मेरा काम सिर्फ विषय पढ़ाना नहीं है।<br>मेरा काम एक बच्चे को खुद पर यकीन करना सिखाना है।<br><br>और classroom की सबसे बड़ी जीत?<br>वो शायद कभी grade book में फिट नहीं होती।"
-    },
-        title: "Journey of Scattered Pages",
-        titleHindi: "बिखरे पन्नों का सफर",
-        type: "Poem",
-        language: "Hindi",
-        date: "Poem · 4 min",
-        excerpt: "वक्त की धूल में चुप-चाप बैठी है। हमने कब सोचा था कि ज़िंदगी यूँ बदल जाएगी...",
-        translation: "Sitting quietly in the dust of time. When did we ever think life would change like this...",
-        read: "वक्त की धूल में चुप-चाप बैठी है।<br>हमने कब सोचा था कि ज़िंदगी यूँ बदल जाएगी,<br>कि सुबह की धूप से लेकर शाम की ठंडी हवा तक,<br>सब कुछ बस एक आदत बन कर रह जाएगा।<br><br>वो पुराने रास्ते, जहाँ कभी बे-वजह दौड़ा करते थे,<br>अब वहाँ बस सन्नाटा और यादों की परछाइयाँ हैं。<br>कितनी अजीब बात है ना, हम सफर तो आगे बढ़ाते हैं,<br>पर दिल का एक टुकड़ा वही पुराने मोड़ पर छूट जाता है—<br>किसी अधूरी किताब के उस पन्ने की तरह,<br>जिसे पढ़ते-पढ़ते नींद आ गई हो,<br>और सुबह उठकर याद ही ना रहे कि आगे क्या था।<br><br>जब चाय की प्याली हाथ में होती है,<br>और खिड़की से आती हुई ठंडी हवा,<br>पिछले सालों की किसी पुरानी याद को छू कर गुज़रती है,<br>तो लगता है—<br>सब कुछ कितना बदल गया,<br>और कितना वही है।<br><br>हम भले ही दौड़ रहे हैं कल की तलाश में, पर आज का ये सुकून,<br>ये छोटा सा अकेले पन का एहसास,<br>किसी के होने या ना होने की ख्वाहिश से कहीं ज़्यादा गहरा है।<br>क्योंकि अंत में,<br>हम सभी बस एक सफर पर हैं,<br>जिसका कोई आखिरी पड़ाव नहीं,<br>बस चलते रहने का एक हसीन सिलसिला है।"
-    },
-        title: "A Woman, Your Emotions",
-        titleHindi: "एक स्त्री तेरे जज्बात",
-        type: "Poem",
-        language: "Hindi",
-        date: "Poem · 5 min",
-        excerpt: "तू रोई है? हाँ... रोई है तू। पर तूने कभी किसी के आगे हाथ नहीं फैलाए...",
-        translation: "You cried? Yes... you cried. But you never stretched your hand out before anyone...",
-        read: "तू रोई है?<br>हाँ... रोई है तू।<br><br>पर तूने कभी किसी के आगे<br>हाथ नहीं फैलाए।<br><br>रोना तेरी कमज़ोरी नहीं,<br>तेरी ईमानदारी है।<br><br>जिस दरवाज़े पर खड़ी रहती थी तू,<br>\"मुझे अंदर आने दो\" कहते हुए,<br>आज वो दरवाज़ा तूने<br>खुद तोड़ दिया।<br><br>और कहा —<br>\"मुझे किसी के घर की ज़रूरत नहीं,<br>मैं खुद अपना घर हूँ।\"<br><br>लोग कहते थे —<br>\"तू कमज़ोर है, तू अकेली कुछ नहीं कर सकती\"<br><br>तूने कुछ नहीं कहा...<br><br>बस मुस्कुराई।<br><br>और उसी मुस्कान से तूने<br>दुनिया बदल दी।<br><br>जिस समाज ने तुझसे कहा —<br>\"शर्म कर, चुप रह, सह ले\"<br>उसी समाज को तूने<br>आँख में आँख डालकर देखा।<br><br>और जब तूने बोला...<br>तो पहाड़ हिल गए,<br>तो आसमान झुक गया,<br>तो ज़मीन ने कहा —<br>\"ये औरत मेरी रौनक़ है।\"<br><br>तू वो है<br>जिसने दर्द को ताक़त बनाया,<br>जिसने आँसुओं को अमृत बनाया,<br>जिसने टूटन को तख़्त बनाया।<br><br>तू पत्थर नहीं...<br>तू वो लौ है जिसे पानी भी<br>बुझा नहीं सकता।<br><br>जिसने तुझे कमज़ोर कहा,<br>उसको सुन ले —<br>तू वो नदी है<br>जो पहाड़ को काटकर रास्ता बनाती है।<br><br>तू वो आँधी है<br>जो तूफ़ान को भी शर्मसार कर दे।<br><br>तू वो आग है<br>जिसे खुद तूने ही जलाया है।<br><br>कहते थे —<br>\"औरत की जगह चूल्हे के पास है\"<br><br>तूने कहा —<br>\"मेरी जगह वहीं है,<br>जहाँ मैं खड़ी हूँ।<br>और मैं जहाँ खड़ी होती हूँ,<br>वहीं इतिहास लिखा जाता है।\"<br><br>जिस रात तू सबसे टूटी थी,<br>उसी रात तूने कहा था —<br>\"ये दर्द मुझे कुचलेगा?<br>नहीं...<br>ये दर्द मुझे ताज पहनाएगा।\"<br><br>और आज... तू ताज पहनी बैठी है।<br><br>तू माँ है, बेटी है, बहन है, पत्नी है...<br>पर उससे पहले —<br>तू एक तूफ़ान है।<br>तू एक क्रांति है।<br>तू एक आग है।<br><br>और जो भी तुझे रोकने आए...<br>तूने जला दिया।<br><br>एक स्त्री के जज्बात<br>उसकी जान हैं,<br>उसकी ताक़त हैं,<br>और उसका गर्व हैं।<br><br>वो झुकेगी नहीं।<br>वो रुकेगी नहीं।<br>वो डरेगी नहीं।<br>क्योंकि वो — एक स्त्री है।"
-    },
-        title: "Me and the Moon",
-        titleHindi: "मैं और चाँद",
-        type: "Poem",
-        language: "Hindi",
-        date: "Poem · 4 min",
-        excerpt: "हर रात जब दुनिया सो जाती है, मैं अपनी छत पर बैठ जाती हूँ...",
-        translation: "Every night when the world falls asleep, I sit on my terrace...",
-        read: "हर रात जब दुनिया सो जाती है, <br>मैं अपनी छत पर बैठ जाती हूँ।<br><br>चाँद वहीं होता है —<br>जैसे पूरा आसमान उसी के लिए खाली कर दिया हो।<br><br>मैं उससे बात करती हूँ।<br>नहीं... मैं उसे सुनाती हूँ।<br><br>वो बोलता नहीं,<br>पर हर रात<br>नए रूप में दिखकर<br>जैसे कहता है —<br><br>\"आज तू कुछ नया बन रही है, ये दिख रहा है मुझे।\"<br><br>कभी वो पूरा होता है,<br>तो मैं सोचती हूँ — शायद मेरे अंदर<br>आज सब कुछ भरा हुआ है।<br><br>कभी वो आधा होता है,<br>तो लगता है — कुछ अधूरा है,<br>पर वो आधा भी इतना खूबसूरत होता है कि<br>अधूरापन भी एक कला लगने लगता है।<br><br>मैंने ब्रेकअप की रात चाँद को देखा था।<br>वो चाँदनी बिखरी हुई थी —<br>जैसे वो भी रो रहा हो।<br><br>मैंने कहा —<br>\"चाँद, तू भी टूटा है क्या?\"<br><br>और शायद उसी रात<br>मैंने पहली बार सोचा —<br><br>टूटा हुआ भी तो चमकता है।<br><br>आज भी मैं उससे मिलने जाती हूँ।<br>हर रात। बिना किसी अपॉइंटमेंट के।<br>हर कोई जानता है उसे...<br>पर उसका दिल सिर्फ़ मुझे दिखता है।<br><br>चाँद... तू मेरा सबसे सच्चा दोस्त है।<br><br>तूने कभी मुझसे जवाब नहीं माँगा,<br>कभी मुझे बदलने को नहीं कहा,<br>कभी मुझे जज नहीं किया।<br><br>बस... हर रात, वहीं, वही जगह, वही खामोशी — मेरे लिए।<br><br>और शायद इसलिए<br>जब मैं कहती हूँ —<br><br>\"मैं अकेली हूँ\"<br><br>तो चाँद मुस्कुरा देता है क्योंकि<br>वो जानता है — मैं उसके साथ हूँ। 🌙"
-    },
+        
+        const pieces = [
             {
-                title: "A room for the rain",
-                titleHindi: "बारिश के लिए एक कमरा",
-                type: "Poem",
+                title: "The Student Who Taught Me True Growth",
+                titleHindi: "वह छात्र जिसने मुझे सच्ची तरक़्क़ी सिखाई",
+                type: "Reflection",
                 language: "English",
-                date: "Poem · 4 min",
-                excerpt: "I leave one window unlatched / for the rain to remember / the way home.",
-                translation: "एक खिड़की खुली छोड़ देती हूँ / ताकि बारिश को याद रहे / घर लौटने का रास्ता।",
-                read: "Some evenings the sky lowers its voice. The cup cools beside me, the page waits, and every small sound finds a place to sit. Rain doesn't knock; it enters like an old friend who knows where the spare key is kept under the sill."
+                date: "Reflection · 5 min",
+                excerpt: "Sometimes teaching is the deepest form of learning...",
+                content: "Sometimes teaching is the deepest form of learning. In every classroom, digital or physical, we look for students who need guidance, but occasionally, a student comes along whose quiet resilience and genuine curiosity teach us what true growth really looks like..."
             },
             {
-                title: "The weight of old letters",
-                titleHindi: "पुरानी चिट्ठियों का वज़न",
-                type: "Reflection",
+                title: "Journey of Scattered Pages",
+                titleHindi: "बिखरे पन्नों का सफर",
+                type: "Poem",
                 language: "Hindi",
-                date: "Reflection · 3 min",
-                excerpt: "कागज़ की तहों में दबी स्याही, समय बीतने के बाद भी बोलती है।",
-                translation: "Ink folded within paper speaks long after time has passed.",
-                read: "जब हम पुरानी डायरियां खोलते हैं, तो सिर्फ शब्द नहीं मिलते—वह दौर लौट आता है जब सांसें धीमी थीं और उम्मीदें लंबी। कागज़ पीला पड़ सकता है, लेकिन उन पन्नों पर ठहरी भावनाएं कभी बूढ़ी नहीं होतीं।"
+                date: "Poem · 4 min",
+                excerpt: "वक्त की धूल में चुप-चाप बैठी है...",
+                content: "वक्त की धूल में चुप-चाप बैठी है, यादों की एक अलमारी पुरानी। हर पन्ने पर लिखा है सफर, जो खुद में समेटे है एक कहानी..."
             }
         ];
 
+        function renderApp() {
+            const main = document.getElementById('main-content');
+            if (currentView === 'Home') {
+                main.innerHTML = `
+                    <section class="space-y-12">
+                        <div class="space-y-4">
+                            <h1 class="serif-font text-4xl md:text-5xl font-normal leading-tight">Words, Stories, & Quiet Reflections</h1>
+                            <p class="text-stone-600 text-lg leading-relaxed max-w-2xl">Welcome to my digital corner. Here I share poetry, reflections on life and learning, and stories woven from everyday moments.</p>
+                        </div>
+                        <div class="border-t border-stone-200 pt-8">
+                            <h2 class="serif-font text-2xl font-normal mb-6">Latest Pieces</h2>
+                            <div class="grid gap-6">
+                                ${pieces.map(p => `
+                                    <div class="p-6 rounded-xl border border-stone-200 bg-white hover:border-stone-300 transition-all">
+                                        <span class="text-xs font-semibold uppercase tracking-wider text-amber-800">${p.type} ·${p.language}</span>
+                                        <h3 class="serif-font text-xl font-medium mt-1 mb-2">${p.title}</h3>
+                                        <p class="text-stone-600 text-sm mb-4">${p.excerpt}</p>
+                                        <span class="text-xs text-stone-500">${p.date}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </section>
+                `;
+            } else if (currentView === 'Poetry & Stories') {
+                main.innerHTML = `
+                    <section class="space-y-8">
+                        <h1 class="serif-font text-4xl font-normal">Poetry & Stories</h1>
+                        <div class="grid gap-6">
+                            ${pieces.map(p => `
+                                <div class="p-6 rounded-xl border border-stone-200 bg-white">
+                                    <span class="text-xs font-semibold uppercase tracking-wider text-amber-800">${p.type} ·${p.language}</span>
+                                    <h2 class="serif-font text-2xl font-medium mt-1 mb-2">${p.title}</h2>
+                                    <h3 class="serif-font text-lg text-stone-600 mb-4">${p.titleHindi}</h3>
+                                    <p class="text-stone-700 leading-relaxed whitespace-pre-line">${p.content}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </section>
+                `;
+            } else if (currentView === 'About') {
+                main.innerHTML = `
+                    <section class="space-y-6 max-w-2xl">
+                        <h1 class="serif-font text-4xl font-normal">About Me</h1>
+                        <p class="text-stone-700 leading-relaxed text-lg">Hello! I am Richa Humnekar, a content writer, scriptwriter, and educator based in Durg, Chhattisgarh. I love crafting stories, poems, and educational learning resources.</p>
+                        <p class="text-stone-700 leading-relaxed">Through this space, I bring together my thoughts, creative expressions, and digital works.</p>
+                    </section>
+                `;
+            } else if (currentView === 'Connect') {
+                main.innerHTML = `
+                    <section class="space-y-6 max-w-2xl">
+                        <h1 class="serif-font text-4xl font-normal">Let's Connect</h1>
+                        <p class="text-stone-700 leading-relaxed">If you'd like to collaborate, discuss writing projects, or just say hello, feel free to reach out!</p>
+                        <div class="p-6 rounded-xl border border-stone-200 bg-white inline-block">
+                            <p class="font-medium text-stone-900">Email: <span class="text-amber-800">richa@example.com</span></p>
+                        </div>
+                    </section>
+                `;
+            }
+            lucide.createIcons();
+        }
+
         function switchView(view) {
             currentView = view;
-            render();
+            renderApp();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
@@ -129,125 +152,7 @@
             menu.classList.toggle('hidden');
         }
 
-        function render() {
-            const container = document.getElementById('main-content');
-            
-            if (currentView === 'Home') {
-                container.innerHTML = `
-                    <div class="space-y-16">
-                        <section class="max-w-2xl py-8">
-                            <h1 class="serif-font text-4xl md:text-5xl font-normal leading-tight text-stone-900 mb-6">
-                                Where quiet thoughts find their shelter in words.
-                            </h1>
-                            <p class="text-lg text-stone-600 font-light leading-relaxed mb-8">
-                                Welcome to my corner of poetry, stories, and mindful reflections. Written in Hindi and English, exploring everyday silences and deeper truths.
-                            </p>
-                            <div class="flex gap-4">
-                                <button onclick="switchView('Poetry & Stories')" class="px-6 py-3 bg-stone-900 text-stone-50 text-sm font-medium rounded-full hover:bg-stone-800 transition-all flex items-center gap-2">
-                                    Explore Writings <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                                </button>
-                            </div>
-                        </section>
-
-                        <section class="border-t border-stone-200 pt-12">
-                            <h2 class="serif-font text-2xl font-normal text-stone-900 mb-8">Featured Pieces</h2>
-                            <div class="grid gap-6 md:grid-cols-2">
-                                ${pieces.map((item, idx) => `
-                                    <div onclick="openPiece(${idx})" class="group p-6 bg-white rounded-2xl border border-stone-200 hover:border-stone-400 transition-all cursor-pointer shadow-sm">
-                                        <div class="text-xs font-medium text-stone-400 mb-2">${item.date}</div>
-                                        <h3 class="serif-font text-xl font-medium text-stone-900 group-hover:text-amber-800 transition-colors mb-1">${item.title}</h3>
-                                        <div class="text-sm font-medium text-stone-600 mb-3">${item.titleHindi}</div>
-                                        <p class="text-sm text-stone-500 line-clamp-2">${item.excerpt}</p>
-                                    </div>
-                                `).join('')}
-                            </div>
-                        </section>
-                    </div>
-                `;
-            } else if (currentView === 'Poetry & Stories') {
-                container.innerHTML = `
-                    <div class="space-y-8">
-                        <div>
-                            <h1 class="serif-font text-3xl font-normal text-stone-900 mb-2">Poetry & Stories</h1>
-                            <p class="text-stone-600">A collection of thoughts, poems, and short reflections.</p>
-                        </div>
-                        <div class="space-y-4">
-                            ${pieces.map((item, idx) => `
-                                <div onclick="openPiece(${idx})" class="p-6 bg-white rounded-2xl border border-stone-200 hover:border-stone-400 transition-all cursor-pointer flex justify-between items-center">
-                                    <div>
-                                        <span class="text-xs text-stone-400">${item.date}</span>
-                                        <h3 class="serif-font text-xl text-stone-900 mt-1">${item.title} / <span class="text-stone-600">${item.titleHindi}</span></h3>
-                                        <p class="text-sm text-stone-500 mt-2">${item.excerpt}</p>
-                                    </div>
-                                    <i data-lucide="arrow-right" class="w-5 h-5 text-stone-400"></i>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                `;
-            } else if (currentView === 'About') {
-                container.innerHTML = `
-                    <div class="max-w-2xl space-y-6">
-                        <h1 class="serif-font text-3xl font-normal text-stone-900">About Me</h1>
-                        <p class="text-lg text-stone-700 leading-relaxed font-light">
-                            Hello! I am Richa Humnekar, a writer, content creator, and educator based in Durg, Chhattisgarh. I love crafting stories, poetry, children's books, and reflective pieces that capture the quiet beauty of everyday life.
-                        </p>
-                        <p class="text-stone-600 leading-relaxed">
-                            Through this digital space, I share my creative journey, writings in Hindi and English, and various thoughts translated from the heart onto the page.
-                        </p>
-                    </div>
-                `;
-            } else if (currentView === 'Connect') {
-                container.innerHTML = `
-                    <div class="max-w-xl space-y-6">
-                        <h1 class="serif-font text-3xl font-normal text-stone-900">Let's Connect</h1>
-                        <p class="text-stone-600">Have a question, collaboration idea, or just want to say hello? Drop a message below.</p>
-                        <div class="bg-white p-6 rounded-2xl border border-stone-200 space-y-4 shadow-sm">
-                            <div>
-                                <label class="block text-xs font-semibold text-stone-600 uppercase mb-1">Your Name</label>
-                                <input type="text" class="w-full px-4 py-2 border border-stone-300 rounded-lg focus:outline-none focus:border-stone-600" placeholder="Enter your name">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold text-stone-600 uppercase mb-1">Email</label>
-                                <input type="email" class="w-full px-4 py-2 border border-stone-300 rounded-lg focus:outline-none focus:border-stone-600" placeholder="your@email.com">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold text-stone-600 uppercase mb-1">Message</label>
-                                <textarea rows="4" class="w-full px-4 py-2 border border-stone-300 rounded-lg focus:outline-none focus:border-stone-600" placeholder="Your message..."></textarea>
-                            </div>
-                            <button onclick="alert('Thank you! Your message has been noted.')" class="w-full py-3 bg-stone-900 text-stone-50 rounded-lg font-medium hover:bg-stone-800 transition-colors">Send Message</button>
-                        </div>
-                    </div>
-                `;
-            }
-            lucide.createIcons();
-        }
-
-        function openPiece(idx) {
-            const item = pieces[idx];
-            const container = document.getElementById('main-content');
-            container.innerHTML = `
-                <div class="max-w-2xl space-y-8">
-                    <button onclick="switchView('Poetry & Stories')" class="flex items-center gap-2 text-sm text-stone-600 hover:text-stone-900">
-                        <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to all pieces
-                    </button>
-                    <div>
-                        <span class="text-xs text-stone-400">${item.date}</span>
-                        <h1 class="serif-font text-3xl md:text-4xl text-stone-900 mt-2 mb-1">${item.title}</h1>
-                        <h2 class="serif-font text-xl text-stone-600 font-normal">${item.titleHindi}</h2>
-                    </div>
-                    <div class="prose prose-stone text-stone-700 leading-relaxed space-y-6 text-lg font-light">
-                        <p>${item.read}</p>
-                        ${item.translation ? `<div class="p-6 bg-stone-100 rounded-xl border-l-4 border-stone-400 text-stone-800 text-base italic"><p>${item.translation}</p></div>` : ''}
-                    </div>
-                </div>
-            `;
-            lucide.createIcons();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Initial Load
-        render();
+        renderApp();
     </script>
 </body>
 </html>
