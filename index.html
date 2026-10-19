@@ -1,114 +1,102 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>लेखन और कविताएँ | Richa Humnekar</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #faf9f5;
-            color: #2c2825;
-        }
-        h1, h2, h3, .serif-font {
-            font-family: 'Playfair Display', serif;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>लेखन और कविताएँ | Richa Humnekar</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #faf9f5;
+      color: #2c2825;
+    }
+    h1, h2, h3, .serif-font {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-amber-100">
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 bg-[#faf9f5]/80 backdrop-blur-md border-b border-stone-200">
+    <div class="max-w-4xl mx-auto px-6 h-20 flex items-center justify-between">
+      <span class="serif-font text-xl font-medium tracking-wide cursor-pointer" onclick="switchView('Home')">Richa Humnekar</span>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
+        <button onclick="switchView('Home')" class="hover:text-stone-900 transition-colors">Home</button>
+        <button onclick="switchView('Poetry & Stories')" class="hover:text-stone-900 transition-colors">Poetry & Stories</button>
+        <button onclick="switchView('About')" class="hover:text-stone-900 transition-colors">About</button>
+        <button onclick="switchView('Connect')" class="hover:text-stone-900 transition-colors">Connect</button>
+      </nav>
+      <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-stone-700">
+        <i data-lucide="menu" id="menu-icon"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 border-b border-stone-200 bg-[#faf9f5] flex flex-col gap-4 text-stone-700 font-medium">
+      <button onclick="switchView('Home'); toggleMobileMenu();" class="text-left">Home</button>
+      <button onclick="switchView('Poetry & Stories'); toggleMobileMenu();" class="text-left">Poetry & Stories</button>
+      <button onclick="switchView('About'); toggleMobileMenu();" class="text-left">About</button>
+      <button onclick="switchView('Connect'); toggleMobileMenu();" class="text-left">Connect</button>
+    </div>
+  </header>
 
-    <!-- Navigation -->
-    <header class="sticky top-0 z-50 bg-[#faf9f5]/80 backdrop-blur-md border-b border-stone-200">
-        <div class="max-w-4xl mx-auto px-6 h-20 flex items-center justify-between">
-            <span class="serif-font text-xl font-medium tracking-wide cursor-pointer" onclick="switchView('Home')">Richa Humnekar</span>
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
-                <button onclick="switchView('Home')" class="hover:text-stone-900 transition-colors">Home</button>
-                <button onclick="switchView('Poetry & Stories')" class="hover:text-stone-900 transition-colors">Poetry & Stories</button>
-                <button onclick="switchView('About')" class="hover:text-stone-900 transition-colors">About</button>
-                <button onclick="switchView('Connect')" class="hover:text-stone-900 transition-colors">Connect</button>
-            </nav>
-            <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-stone-700">
-                <i data-lucide="menu" id="menu-icon"></i>
-            </button>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 border-b border-stone-200 bg-[#faf9f5] flex flex-col gap-4 text-stone-700 font-medium">
-            <button onclick="switchView('Home'); toggleMobileMenu();" class="text-left">Home</button>
-            <button onclick="switchView('Poetry & Stories'); toggleMobileMenu();" class="text-left">Poetry & Stories</button>
-            <button onclick="switchView('About'); toggleMobileMenu();" class="text-left">About</button>
-            <button onclick="switchView('Connect'); toggleMobileMenu();" class="text-left">Connect</button>
-        </div>
-    </header>
+  <!-- Main Content Area -->
+  <main id="main-content" class="flex-grow max-w-4xl mx-auto px-6 py-12 w-full">
+    <!-- Dynamically injected view will appear here -->
+  </main>
 
-    <!-- Main Content Area -->
-    <main id="main-content" class="flex-grow max-w-4xl mx-auto px-6 py-12 w-full">
-        <!-- Dynamically injected view will appear here -->
-    </main>
+  <!-- Footer -->
+  <footer class="border-t border-stone-200 py-8 text-center text-sm text-stone-500 bg-[#faf9f5]">
+    <p>© 2026 Richa Humnekar. All rights reserved. Crafted with words and quiet reflections.</p>
+  </footer>
 
-    <!-- Footer -->
-    <footer class="border-t border-stone-200 py-8 text-center text-sm text-stone-500 bg-[#faf9f5]">
-        <p>© 2026 Richa Humnekar. All rights reserved. Crafted with words and quiet reflections.</p>
-    </footer>
-
-    <!-- JavaScript Logic -->
-    <script>
-        let currentView = 'Home';
-        
-        const pieces = [
-            {
-                title: "आखिरी चाय",
-                titleHindi: "आखिरी चाय",
-                type: "Story",
-                language: "Hindi",
-                date: "Story · 6 min",
-                excerpt: "दृश्य 1: एक छोटा ढाबा - हाईवे के किनारे - रात के 11 बजे। कबीर और अमित के बीच एक अजीब सा भारीपन है...",
-                content: `दृश्य 1: एक छोटा ढाबा - हाईवे के किनारे - रात के 11 बजे
+  <!-- JavaScript Logic -->
+  <script>
+    let currentView = 'Home';
+    const pieces = [
+      {
+        title: "आखिरी चाय",
+        titleHindi: "आखिरी चाय",
+        type: "Story",
+        language: "Hindi",
+        date: "Story · 6 min",
+        excerpt: "दृश्य 1: एक छोटा ढाबा - हाईवे के किनारे - रात के 11 बजे। कबीर और अमित के बीच एक अजीब सा भारीपन है...",
+        content: `दृश्य 1: एक छोटा ढाबा - हाईवे के किनारे - रात के 11 बजे
 (हल्की-हल्की हवा चल रही है। ढाबे की एक पीली, टिमटिमाती लाइट के नीचे कबीर और अमित बैठे हैं। मेज पर प्लास्टिक के दो कपों में चाय रखी है, जिससे भाप निकल रही है। दोनों के बीच एक अजीब सा भारीपन है। कबीर अपनी जेब में हाथ डाले सड़क की तरफ देख रहा है। अमित बस अपने चाय के कप को उंगलियों से घुमा रहा है। दोनों में से कोई कुछ बोल नहीं रहा, लेकिन उनकी आँखें बहुत थकी हुई हैं।)
-
 कबीर: (चाय का घूंट लेता है, आवाज़ में थोड़ा खालीपन है) तो… सुबह की फ्लाइट है?
-
 अमित: (बिना कबीर की तरफ देखे, सिर्फ सिर हिलाता है) हाँ। 5 बजे की है। 3 बजे निकलना पड़ेगा घर से।
 (फिर से सन्नाटा छा जाता है। ढाबे के रेडियो पर बहुत धीमी आवाज़ में कोई पुराना गाना बज रहा है। दूर से एक ट्रक तेज़ी से horn बजाते हुए गुज़र जाता है, जिसकी रोशनी दोनों के चेहरों पर पड़कर निकल जाती है।)
 
 दृश्य 2: ढाबे की बेंच - यादों का बोझ
 (अमित चाय का कप टेबल पर रखता है। वह कुछ कहना चाहता है, उसका मुंह खुलता है, लेकिन वो रुक जाता है। वो कबीर के पुराने, घिसे हुए जूतों को देखता है। वही जूते जो दोनों ने कालेज के पहले दिन साथ खरीदे थे।)
-
 अमित: (हल्की सी हंसी के साथ, जो तुरंत गायब हो जाती है) यार, याद है? जब हम पहली बार इस ढाबे पर आए थे। जेब में सिर्फ चालीस रुपये थे।
-
 कबीर: (सड़क की तरफ देखते हुए ही मुसकुराता है, उसकी आँखें नम हैं) हाँ। और तूने कहा था कि जब बड़े आदमी बन जाएंगे, तो ये पूरा ढाबा खरीद लेंगे।
 (अमित कबीर की तरफ देखता है। वह जानता है कि वो अब एक बहुत बड़ी कंपनी का vice president बनकर विदेश जा रहा है, और कबीर वहीं उसी शहर में रह गया है। दोनों के रास्ते इतने अलग हो चुके हैं कि अब बात करने के लिए कोई common topic ही नहीं बचा। पर दिल में वो पुराना हक़ अभी भी है।)
-
 कबीर: (अमित की तरफ मुड़ता है) वहाँ… सब ठीक हो जाएगा। तू संभाल लेगा। शुरू से ही तू मुझसे ज़्यादा practicle था।
 अमित: (गला भर आता है, आवाज़ थोड़ी भारी हो जाती है) Practical होना हमेशा अच्छा नहीं होता कबीर। कभी-कभी… बहुत कुछ पीछे छूट जाता है।
 (दोनों एक-दूसरे को देखते हैं। अमित कहना चाहता है कि 'मुझे माफ़ कर देना कि मैं दूर जा रहा हूँ।' कबीर कहना चाहता है कि 'मत जा भाई, तेरे बिना यह शहर काटने को दौड़ेगा।' लेकिन दोनों में से कोई एक शब्द भी नहीं बोलता। सिर्फ खामोशी बातें कर रही है।)
 
 दृश्य 3: विदाई का पल - हाईवे
 (चाय खत्म हो चुकी है। अमित की Cab आकर सड़क के किनारे रुकती है। Cab की पीली Headlights दोनों पर पड़ती हैं। अमित खड़ा होता है, उसका बैग उसके कंधे पर है। कबीर भी खड़ा हो जाता है।)
-
 अमित: (कबीर के कंधे पर हाथ रखता है, उसे थोड़ा भींचता है) चल… चलता हूँ।
-
 कबीर: (अमित को देखता है, और बस सिर हिलाता है) अपना ख्याल रखना। फोन… जब टाइम मिले, कर लेना।
-
 (अमित मुड़ता है और cab की तरफ बढ़ने लगता है। कबीर वहीं खड़ा उसे देखता रहता है। अमित कैब का दरवाज़ा खोलता है, एक पल के लिए रुकता है, जैसे वो आखिरी बार पीछे मुड़कर देखना चाहता हो। लेकिन वो बिना पीछे देखे अंदर बैठ जाता है। दरवाज़ा बंद होने की आवाज़ आती है।)
 
 दृश्य 4: खाली ढाबा - अंत
-(cab धीरे-धीरे आगे बढ़ जाती है और उसकी लाल Tale lights अंधेरे में गायब हो जाती हैं। कबीर वापस उसी टेबल पर आकर बैठ जाता है। मेज पर अमित का आधा खाली चाय का कप अभी भी रखा है। कबीर उस कप को देखता है।
-वह अपना फोन निकालता है, अमित का नंबर screen पर आता है। कबीर टाइप करता है: "यार, मत जा।" लेकिन वो उसे send नहीं करता। वो पूरे टेक्स्ट को delete कर देता है, फोन जेब में रखता है और अपनी ठंडी हो चुकी चाय का आखिरी घूंट पीता है।)
-
+(cab धीरे-धीरे आगे बढ़ जाती है और उसकी लाल Tale lights अंधेरे में गायब हो जाती हैं। कबीर वापस उसी टेबल पर आकर बैठ जाता है। मेज पर अमित का आधा खाली चाय का कप अभी भी रखा है। कबीर उस कप को देखता है। वह अपना फोन निकालता है, अमित का नंबर screen पर आता है। कबीर टाइप करता है: "यार, मत जा।" लेकिन वो उसे send नहीं करता। वो पूरे टेक्स्ट को delete कर देता है, फोन जेब में रखता है और अपनी ठंडी हो चुकी चाय का आखिरी घूंट पीता है।)
 कट टू ब्लैक।`
-            },
-            {
-  title: "आखिरी डायरी का पन्ना",
-  titleHindi: "आखिरी डायरी का पन्ना",
-  type: "Story",
-  language: "Hindi",
-  date: "Story · 7 min",
-  excerpt: "एक पुराना पुस्तकालय, रात के 9 बजे और प्रोफेसर वर्मा की वह रहस्यमयी डायरी जिसके आखिरी पन्ने पर लिखा था...",
-  content: `एक पुराना पुस्तकालय (Old Library) - रात के 9 बजे
+      },
+      {
+        title: "आखिरी डायरी का पन्ना",
+        titleHindi: "आखिरी डायरी का पन्ना",
+        type: "Story",
+        language: "Hindi",
+        date: "Story · 7 min",
+        excerpt: "एक पुराना पुस्तकालय, रात के 9 बजे और प्रोफेसर वर्मा की वह रहस्यमयी डायरी जिसके आखिरी पन्ने पर लिखा था...",
+        content: `एक पुराना पुस्तकालय (Old Library) - रात के 9 बजे
 (बाहर तेज़ आंधी चल रही है। खिड़की के कांच बार-बार टकरा रहे हैं। पुस्तकालय के अंदर एक पुरानी टेबल पर सिर्फ एक टेबल लैंप जल रहा है। अयान, जो एक कॉलेज Student है, धूल से भरी पुरानी किताबों के Rack में कुछ ढूंढ रहा है। अचानक उसकी उंगली एक मोटी, काली चमड़े (leather) की डायरी पर पड़ती है। डायरी पर एक पुराना पीतल का ताला लगा है, जो टूटा हुआ है। अयान उसे खोलता है।)
 
 अयान: (खुद से बुदबुदाते हुए) ये डायरी तो prof. वर्मा की है… जो तीन साल पहले इसी रात अचानक गायब हो गए थे।
@@ -132,237 +120,150 @@
 अंधेरे में, ठीक उसके पीछे, किसी के भारी जूतों की आवाज़ सुनाई देती है। कोई उसके बेहद करीब आ रहा है। एक बूढ़ी, जानी-पहचानी आवाज़ गूंजती है।)
 अजनबी आवाज़: (अंधेरे में से) मैंने कहा था ना अयान… कि वो अलमारी के पीछे नहीं, बल्कि तुम्हारे ठीक पीछे खड़ा है।
 (अयान के गले से आवाज़ नहीं निकलती। वो जैसे ही मुड़ने की कोशिश करता है, एक ठंडी उंगली उसकी गर्दन को छूती है।)`
-}
-            {
-                title: "वह आंगन की धूप और यह screen की रोशनी",
-                titleHindi: "वह आंगन की धूप और यह screen की रोशनी",
-                type: "Poem",
-                language: "Hindi",
-                date: "Poem · 5 min",
-                excerpt: "वह कागज़ की छोटी नाव, वह बारिश का पानी, वह पुरानी कहानी अब कहीं छिप गई है...",
-                content: `वह आंगन की धूप और यह screen की रोशनी
-ओह वह कागज़ की छोटी नाव, वह बारिश का पानी,
-वह पुरानी कहानी अब कहीं छिप गई है।
-screen की धुंध में छिपी हुई,
-उस बच्चे की बेफिक्र खुशी।
-
-हमारी हथेलियों में मिट्टी की मूर्तियाँ नहीं हैं,
-पेड़ों की छाया में रोना नहीं है।
-दुनिया अब कमरे में एक छोटी सी जगह में सिमट गई है,
-वह नीला रंग, वह कांच जैसी शांति।
-
-उन दोस्तों का क्या हुआ, गलियों में वो चहलकदमी,
-तितलियों के पीछे भागते वो भोर?
-बच्चे का रोना अब सूचना है,
-सभी रंग चले गए, बस reels चलती रहती हैं।
-
-इन हाथों से यह रोशनी हटा दो,
-जिसने मासूमियत को सताया।
-हमें वह बचपन फिर से मिल जाए,
-मिट्टी की वह महक, शामों का वह आराम।`
-            },
-            {
-                title: "एक स्त्री तेरे जज्बात",
-                titleHindi: "एक स्त्री तेरे जज्बात",
-                type: "Poem",
-                language: "Hindi",
-                date: "Poem · 5 min",
-                excerpt: "तू रोई है? हाँ... रोई है तू। पर तूने कभी किसी के आगे हाथ नहीं फैलाए...",
-                content: `तू रोई है?
-हाँ... रोई है तू।
-
-पर तूने कभी किसी के आगे
-हाथ नहीं फैलाए।
-
-रोना तेरी कमज़ोरी नहीं,
-तेरी ईमानदारी है।
-
-जिस दरवाज़े पर खड़ी रहती थी तू,
-"मुझे अंदर आने दो" कहते हुए,
-आज वो दरवाज़ा तूने
-खुद तोड़ दिया।
-
-और कहा —
-"मुझे किसी के घर की ज़रूरत नहीं,
-मैं खुद अपना घर हूँ।"
-
-लोग कहते थे —
-"तू कमज़ोर है, तू अकेली कुछ नहीं कर सकती"
-
-तूने कुछ नहीं कहा...
-
-बस मुस्कुराई।
-
-और उसी मुस्कान से तूने
-दुनिया बदल दी।
-
-जिस समाज ने तुझसे कहा —
-"शर्म कर, चुप रह, सह ले"
-उसी समाज को तूने
-आँख में आँख डालकर देखा।
-
-और जब तूने बोला...
-तो पहाड़ हिल गए,
-तो आसमान झुक गया,
-तो ज़मीन ने कहा —
-"ये औरत मेरी रौनक़ है।"
-
-तू वो है
-जिसने दर्द को ताक़त बनाया,
-जिसने आँसुओं को अमृत बनाया,
-जिसने टूटन को तख़्त बनाया।
-
-तू पत्थर नहीं...
-तू वो लौ है जिसे पानी भी
-बुझा नहीं सकता।
-
-जिसने तुझे कमज़ोर कहा,
-उसको सुन ले —
-
-तू वो नदी है
-जो पहाड़ को काटकर रास्ता बनाती है।
-
-तू वो आँधी है
-जो तूफ़ान को भी शर्मसार कर दे।
-
-तू वो आग है
-जिसे खुद तूने ही जलाया है।
-
-कहते थे —
-"औरत की जगह चूल्हे के पास है"
-
-तूने कहा —
-
-"मेरी जगह वहीं है,
-जहाँ मैं खड़ी हूँ।
-और मैं जहाँ खड़ी होती हूँ,
-वहीं इतिहास लिखा जाता है।"
-
-जिस रात तू सबसे टूटी थी,
-उसी रात तूने कहा था —
-
-"ये दर्द मुझे कुचलेगा?
-नहीं...
-ये दर्द मुझे ताज पहनाएगा।"
-
+      },
+      {
+        title: "वह आंगन की धूप और यह screen की रोशनी",
+        titleHindi: "वह आंगन की धूप और यह screen की रोशनी",
+        type: "Poem",
+        language: "Hindi",
+        date: "Poem · 5 min",
+        excerpt: "वह कागज़ की छोटी नाव, वह बारिश का पानी, वह पुरानी कहानी अब कहीं छिप गई है...",
+        content: `वह आंगन की धूप और यह screen की रोशनी
+ओह वह कागज़ की छोटी नाव, वह बारिश का पानी, वह पुरानी कहानी अब कहीं छिप गई है।
+screen की धुंध में छिपी हुई, उस बच्चे की बेफिक्र खुशी।
+हमारी हथेलियों में मिट्टी की मूर्तियाँ नहीं हैं, पेड़ों की छाया में रोना नहीं है।
+दुनिया अब कमरे में एक छोटी सी जगह में सिमट गई है, वह नीला रंग, वह कांच जैसी शांति।
+उन दोस्तों का क्या हुआ, गलियों में वो चहलकदमी, तितलियों के पीछे भागते वो भोर?
+बच्चे का रोना अब सूचना है, सभी रंग चले गए, बस reels चलती रहती हैं।
+इन हाथों से यह रोशनी हटा दो, जिसने मासूमियत को सताया।
+हमें वह बचपन फिर से मिल जाए, मिट्टी की वह महक, शामों का वह आराम।`
+      },
+      {
+        title: "एक स्त्री तेरे जज्बात",
+        titleHindi: "एक स्त्री तेरे जज्बात",
+        type: "Poem",
+        language: "Hindi",
+        date: "Poem · 5 min",
+        excerpt: "तू रोई है? हाँ... रोई है तू। पर तूने कभी किसी के आगे हाथ नहीं फैलाए...",
+        content: `तू रोई है? हाँ... रोई है तू। पर तूने कभी किसी के आगे हाथ नहीं फैलाए।
+रोना तेरी कमज़ोरी नहीं, तेरी ईमानदारी है।
+जिस दरवाज़े पर खड़ी रहती थी तू, "मुझे अंदर आने दो" कहते हुए, आज वो दरवाज़ा तूने खुद तोड़ दिया।
+और कहा — "मुझे किसी के घर की ज़रूरत नहीं, मैं खुद अपना घर हूँ।"
+लोग कहते थे — "तू कमज़ोर है, तू अकेली कुछ नहीं कर सकती"
+तूने कुछ नहीं कहा... बस मुस्कुराई। और उसी मुस्कान से तूने दुनिया बदल दी।
+जिस समाज ने तुझसे कहा — "शर्म कर, चुप रह, सह ले"
+उसी समाज को तूने आँख में आँख डालकर देखा।
+और जब तूने बोला... तो पहाड़ हिल गए, तो आसमान झुक गया, तो ज़मीन ने कहा — "ये औरत मेरी रौनक़ है।"
+तू वो है जिसने दर्द को ताक़त बनाया, जिसने आँसुओं को अमृत बनाया, जिसने टूटन को तख़्त बनाया।
+तू पत्थर नहीं... तू वो लौ है जिसे पानी भी बुझा नहीं सकता।
+जिसने तुझे कमज़ोर कहा, उसको सुन ले — तू वो नदी है जो पहाड़ को काटकर रास्ता बनाती है।
+तू वो आँधी है जो तूफ़ान को भी शर्मसार कर दे।
+तू वो आग है जिसे खुद तूने ही जलाया है।
+कहते थे — "औरत की जगह चूल्हे के पास है"
+तूने कहा — "मेरी जगह वहीं है, जहाँ मैं खड़ी हूँ। और मैं जहाँ खड़ी होती हूँ, वहीं इतिहास लिखा जाता है।"
+जिस रात तू सबसे टूटी थी, उसी रात तूने कहा था — "ये दर्द मुझे कुचलेगा? नहीं... ये दर्द मुझे ताज पहनाएगा।"
 और आज... तू ताज पहनी बैठी है।
-
-तू माँ है, बेटी है, बहन है, पत्नी है...
-पर उससे पहले —
-
-तू एक तूफ़ान है।
-तू एक क्रांति है।
-तू एक आग है।
-
-और जो भी तुझे रोकने आए...
-तूने जला दिया।
-
-एक स्त्री के जज्बात
-उसकी जान हैं,
-उसकी ताक़त हैं,
-और उसका गर्व हैं।
-
-वो झुकेगी नहीं।
-वो रुकेगी नहीं।
-वो डरेगी नहीं।
+तू माँ है, बेटी है, बहन है, पत्नी है... पर उससे पहले — तू एक तूफ़ान है। तू एक क्रांति है। तू एक आग है।
+और जो भी तुझे रोकने आए... तूने जला दिया।
+एक स्त्री के जज्बात उसकी जान हैं, उसकी ताक़त हैं, और उसका गर्व हैं।
+वो झुकेगी नहीं। वो रुकेगी नहीं। वो डरेगी नहीं।
 क्योंकि वो — एक स्त्री है।`
-            },
-            {
-                title: "The Student Who Taught Me True Growth",
-                titleHindi: "वह छात्र जिसने मुझे सच्ची तरक़्क़ी सिखाई",
-                type: "Reflection",
-                language: "English",
-                date: "Reflection · 5 min",
-                excerpt: "Sometimes teaching is the deepest form of learning...",
-                content: "Sometimes teaching is the deepest form of learning. In every classroom, digital or physical, we look for students who need guidance, but occasionally, a student comes along whose quiet resilience and genuine curiosity teach us what true growth really looks like..."
-            },
-            {
-                title: "Journey of Scattered Pages",
-                titleHindi: "बिखरे पन्नों का सफर",
-                type: "Poem",
-                language: "Hindi",
-                date: "Poem · 4 min",
-                excerpt: "वक्त की धूल में चुप-चाप बैठी है...",
-                content: "वक्त की धूल में चुप-चाप बैठी है, यादों की एक अलमारी पुरानी। हर पन्ने पर लिखा है सफर, जो खुद में समेटे है एक कहानी..."
-            }
-        ];
+      },
+      {
+        title: "The Student Who Taught Me True Growth",
+        titleHindi: "वह छात्र जिसने मुझे सच्ची तरक़्क़ी सिखाई",
+        type: "Reflection",
+        language: "English",
+        date: "Reflection · 5 min",
+        excerpt: "Sometimes teaching is the deepest form of learning...",
+        content: "Sometimes teaching is the deepest form of learning. In every classroom, digital or physical, we look for students who need guidance, but occasionally, a student comes along whose quiet resilience and genuine curiosity teach us what true growth really looks like..."
+      },
+      {
+        title: "Journey of Scattered Pages",
+        titleHindi: "बिखरे पन्नों का सफर",
+        type: "Poem",
+        language: "Hindi",
+        date: "Poem · 4 min",
+        excerpt: "वक्त की धूल में चुप-चाप बैठी है...",
+        content: "वक्त की धूल में चुप-चाप बैठी है, यादों की एक अलमारी पुरानी। हर पन्ने पर लिखा है सफर, जो खुद में समेटे है एक कहानी..."
+      }
+    ];
 
-        function renderApp() {
-            const main = document.getElementById('main-content');
-            if (currentView === 'Home') {
-                main.innerHTML = `
-                    <section class="space-y-12">
-                        <div class="space-y-4">
-                            <h1 class="serif-font text-4xl md:text-5xl font-normal leading-tight">Words, Stories, & Quiet Reflections</h1>
-                            <p class="text-stone-600 text-lg leading-relaxed max-w-2xl">Welcome to my digital corner. Here I share poetry, reflections on life and learning, and stories woven from everyday moments.</p>
-                        </div>
-                        <div class="border-t border-stone-200 pt-8">
-                            <h2 class="serif-font text-2xl font-normal mb-6">Latest Pieces</h2>
-                            <div class="grid gap-6">
-                                ${pieces.map(p => `
-                                    <div class="p-6 rounded-xl border border-stone-200 bg-white hover:border-stone-300 transition-all">
-                                        <span class="text-xs font-semibold uppercase tracking-wider text-amber-800">${p.type} ·${p.language}</span>
-                                        <h3 class="serif-font text-xl font-medium mt-1 mb-2">${p.title}</h3>
-                                        <p class="text-stone-600 text-sm mb-4">${p.excerpt}</p>
-                                        <span class="text-xs text-stone-500">${p.date}</span>
-                                    </div>
-                                `).join('')}
-                            </div>
-                        </div>
-                    </section>
-                `;
-            } else if (currentView === 'Poetry & Stories') {
-                main.innerHTML = `
-                    <section class="space-y-8">
-                        <h1 class="serif-font text-4xl font-normal">Poetry & Stories</h1>
-                        <div class="grid gap-6">
-                            ${pieces.map(p => `
-                                <div class="p-6 rounded-xl border border-stone-200 bg-white">
-                                    <span class="text-xs font-semibold uppercase tracking-wider text-amber-800">${p.type} ·${p.language}</span>
-                                    <h2 class="serif-font text-2xl font-medium mt-1 mb-2">${p.title}</h2>
-                                    <h3 class="serif-font text-lg text-stone-600 mb-4">${p.titleHindi}</h3>
-                                    <p class="text-stone-700 leading-relaxed whitespace-pre-line">${p.content}</p>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </section>
-                `;
-            }  else if (currentView === 'About') {
-                main.innerHTML = `
-                    <section class="space-y-6 max-w-2xl">
-                        <h1 class="serif-font text-4xl font-normal">About Me</h1>
-                        <p class="text-stone-700 leading-relaxed text-lg">Hello! I am Richa Humnekar, a content writer, scriptwriter, and educator based in Durg, Chhattisgarh. I love crafting stories, poems, and educational learning resources.</p>
-                        <p class="text-stone-700 leading-relaxed">My writing spans across heartfelt poetry, emotional narratives like 'आखिरी चाय', and reflections on modern life and learning. Beyond writing, I enjoy designing digital products and creating spaces where imagination meets everyday moments.</p>
-                        <p class="text-stone-700 leading-relaxed">Through this digital corner, I bring together my thoughts, creative expressions, and words written with quiet reflections.</p>
-                    </section>
-                
-                `;
-            } else if (currentView === 'Connect') {
-                main.innerHTML = `
-                    <section class="space-y-6 max-w-2xl">
-                        <h1 class="serif-font text-4xl font-normal">Let's Connect</h1>
-                        <p class="text-stone-700 leading-relaxed">If you'd like to collaborate, discuss writing projects, or just say hello, feel free to reach out!</p>
-                        <div class="p-6 rounded-xl border border-stone-200 bg-white inline-block">
-                            <p class="font-medium text-stone-900">Email: <span class="text-amber-800">richahumnekar2022@gmail.com</span></p>
-                        </div>
-                    </section>
-                `;
-            }
-            lucide.createIcons();
-        }
+    function renderApp() {
+      const main = document.getElementById('main-content');
+      if (currentView === 'Home') {
+        main.innerHTML = `
+          <section class="space-y-12">
+            <div class="space-y-4">
+              <h1 class="serif-font text-4xl md:text-5xl font-normal leading-tight">Words, Stories, & Quiet Reflections</h1>
+              <p class="text-stone-600 text-lg leading-relaxed max-w-2xl">Welcome to my digital corner. Here I share poetry, reflections on life and learning, and stories woven from everyday moments.</p>
+            </div>
+            <div class="border-t border-stone-200 pt-8">
+              <h2 class="serif-font text-2xl font-normal mb-6">Latest Pieces</h2>
+              <div class="grid gap-6">
+                ${pieces.map(p => `
+                  <div class="p-6 rounded-xl border border-stone-200 bg-white hover:border-stone-300 transition-all">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-amber-800">${p.type} ·${p.language}</span>
+                    <h3 class="serif-font text-xl font-medium mt-1 mb-2">${p.title}</h3>
+                    <p class="text-stone-600 text-sm mb-4">${p.excerpt}</p>
+                    <span class="text-xs text-stone-500">${p.date}</span>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </section>
+        `;
+      } else if (currentView === 'Poetry & Stories') {
+        main.innerHTML = `
+          <section class="space-y-8">
+            <h1 class="serif-font text-4xl font-normal">Poetry & Stories</h1>
+            <div class="grid gap-6">
+              ${pieces.map(p => `
+                <div class="p-6 rounded-xl border border-stone-200 bg-white">
+                  <span class="text-xs font-semibold uppercase tracking-wider text-amber-800">${p.type} ·${p.language}</span>
+                  <h2 class="serif-font text-2xl font-medium mt-1 mb-2">${p.title}</h2>
+                  <h3 class="serif-font text-lg text-stone-600 mb-4">${p.titleHindi}</h3>
+                  <p class="text-stone-700 leading-relaxed whitespace-pre-line">${p.content}</p>
+                </div>
+              `).join('')}
+            </div>
+          </section>
+        `;
+      } else if (currentView === 'About') {
+        main.innerHTML = `
+          <section class="space-y-6 max-w-2xl">
+            <h1 class="serif-font text-4xl font-normal">About Me</h1>
+            <p class="text-stone-700 leading-relaxed text-lg">Hello! I am Richa Humnekar, a content writer, scriptwriter, and educator based in Durg, Chhattisgarh. I love crafting stories, poems, and educational learning resources.</p>
+            <p class="text-stone-700 leading-relaxed">My writing spans across heartfelt poetry, emotional narratives like 'आखिरी चाय', and reflections on modern life and learning. Beyond writing, I enjoy designing digital products and creating spaces where imagination meets everyday moments.</p>
+            <p class="text-stone-700 leading-relaxed">Through this digital corner, I bring together my thoughts, creative expressions, and words written with quiet reflections.</p>
+          </section>
+        `;
+      } else if (currentView === 'Connect') {
+        main.innerHTML = `
+          <section class="space-y-6 max-w-2xl">
+            <h1 class="serif-font text-4xl font-normal">Let's Connect</h1>
+            <p class="text-stone-700 leading-relaxed">If you'd like to collaborate, discuss writing projects, or just say hello, feel free to reach out!</p>
+            <div class="p-6 rounded-xl border border-stone-200 bg-white inline-block">
+              <p class="font-medium text-stone-900">Email: <span class="text-amber-800">richahumnekar2022@gmail.com</span></p>
+            </div>
+          </section>
+        `;
+      }
+      lucide.createIcons();
+    }
 
-        function switchView(view) {
-            currentView = view;
-            renderApp();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+    function switchView(view) {
+      currentView = view;
+      renderApp();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
 
-        renderApp();
-    </script>
+    renderApp();
+  </script>
 </body>
 </html>
